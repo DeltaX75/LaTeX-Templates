@@ -1,0 +1,192 @@
+\documentclass{beamer}
+\usetheme{Madrid}
+% \usefonttheme{serif}
+\usefonttheme[onlymath]{serif}
+% 字体包: mathptmx, helvet, avat, bookman, chancery, charter, culer, mathtime, mathptm, newcent, palatino, pifont and utopia.
+% \usepackage{mathptmx}
+% \usepackage{ctex}
+\usepackage{amsmath}  % 提供了更多的数学符号和命令
+\usepackage{amssymb}  % 提供了各种数学符号
+\usepackage{textcomp} % 提供额外的符号
+\usepackage{xcolor} %提供不同颜色
+%bib参考文献
+\usepackage[backend=biber,style=numeric,sorting=none]{biblatex}
+\addbibresource{references.bib} %BibTeX数据文件及位置
+\setbeamerfont{footnote}{size=\tiny} %调整注脚的文字大小
+% \setbeamertemplate{bibliography item}[text] %标准格式[1]参考文献
+%%%%
+
+\title{Research Progress Report}
+\author{Yuchen Sun}
+\institute{Ocean University of China}
+\date{\today}
+
+% 以下设置目录页突出显示当前主题
+\AtBeginSection[]
+{
+  \begin{frame}
+    \frametitle{Table of Contents}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+%% 设置完毕
+
+\begin{document}
+% \songti  % 如果需要中文，则这一行可将中文改为宋体
+\maketitle
+\footnotesize
+\begin{frame}
+    \tableofcontents
+\end{frame}
+\section{High Order Fully Actuated Approach}
+\begin{frame}{High Order Fully Actuated Approach}
+    \footnotesize
+    These integrals are remarkable for exhibiting apparent patterns that eventually break down.
+    \[
+\text{Let }\boldsymbol{\alpha}\boldsymbol{\beta}^T=\boldsymbol{A}\,\,\Rightarrow\,\,\left\{\begin{aligned}
+(\boldsymbol{\alpha}\boldsymbol{\beta}^T)^n&=(\boldsymbol{\alpha}^T\boldsymbol{\beta})^{(n-1)}\boldsymbol{A}\\
+&=\text{trace}(A)^{n-1}\boldsymbol{A}\\
+&=\lambda^{n-1}\boldsymbol{A}\\
+\end{aligned}\right.
+     \]
+\end{frame}
+
+% insert a sample frame with two columns --------------------------------
+\begin{frame}
+\frametitle{High Order Fully Actuated Approach}
+\begin{columns}
+\column{0.5\textwidth}
+This is a text in first column.
+$$E=mc^2$$
+\begin{itemize}
+\item First item
+\item Second item
+\end{itemize}
+
+\column{0.5\textwidth}
+This text will be in the second column
+and on a second tought this is a nice looking
+layout in some cases.
+\end{columns}
+\end{frame}
+
+\section{Time-Varying Models}
+\begin{frame}{Riemann Hypothesis}
+    In mathematics, the Riemann hypothesis is a conjecture that the Riemann zeta function has its zeros only at the negative even integers and complex numbers with real part $\frac{1}{2}$. 
+    
+    Many consider it to be the most important unsolved problem in pure mathematics. It is of great interest in number theory because it implies results about the distribution of prime numbers. It was proposed by Bernhard Riemann (1859), after whom it is named.
+    \begin{alertblock}{Riemann Hypothesis}
+        Riemann $\zeta$ function
+        \[
+            \zeta(s)= - \frac{\Gamma(1-s)}{2\pi i} \int_{C} \frac{(-z)^{s-1}}{e^z-1} {\rm d} z
+        \]
+        The real part of every nontrivial zero of the Riemann zeta function is $\frac{1}{2}$
+        \end{alertblock}
+\end{frame}
+
+\begin{frame}{Basic Blocks}
+    \begin{block}{Standard Block}
+        This is a standard block.
+    \end{block}
+    \begin{alertblock}{Alert Message}
+        This block presents alert message.
+    \end{alertblock}
+    \begin{exampleblock}{An example of typesetting tool}
+        Example: MS Word, \LaTeX{}
+    \end{exampleblock}
+\end{frame}
+
+\begin{frame}{Mathematical Environment Blocks}
+    \begin{definition} 
+        This is a definition.
+    \end{definition}
+    
+    \begin{theorem} 
+        This is a theorem. 
+    \end{theorem}
+    
+    \begin{lemma} 
+        This is a proof idea.
+    \end{lemma}
+\end{frame}
+% Frame 3
+\begin{frame}{Mathematical Environment Blocks-Continued}
+    \begin{proof} 
+        This is a proof. 
+    \end{proof}
+    
+    \begin{corollary}
+        This is a corollary
+    \end{corollary}
+    
+    \begin{example}
+        This is an example 
+    \end{example}
+\end{frame}
+
+\begin{frame}{Time-Varying Model 1: Duan 5\footfullcite{Duan G. High-order fully actuated system approaches: Part V. Robust adaptive control[J]. International Journal of Systems Science, 2021, 52(10): 2129-2143.}}
+This paper considers the control of the following uncertain HOFA system:
+\begin{equation}
+x^{(n)} = f(x^{0\sim n-1}) + \Delta f(x^{0\sim n-1}) + H^T(x^{0\sim n-1})\theta + L(x^{0\sim n-1})u \notag
+\end{equation}
+where \( x, u \in \mathbb{R}^r \) are the state vector and the control input vector, respectively, 
+
+\( f(x^{0\sim n-1}) \in \mathbb{R}^r \) is a continuous vector function, 
+
+\( H(x^{0\sim n-1}) \in \mathbb{R}^{m \times r} \) and \( L(x^{0\sim n-1}) \in \mathbb{R}^{r \times r} \) are two continuous matrix functions, and 
+
+\( L(x^{0\sim n-1}) \) satisfies the following fully actuated assumption:
+
+\textbf{Assumption A1:} \( \det L(x^{0\sim n-1}) \neq 0, \forall x(i) \in \mathbb{R}^r, i = 0, 1, \ldots, n-1. \)
+
+Furthermore, \( \Delta f(x^{0\sim n-1}) \in \mathbb{R}^r \) is an uncertain nonlinearity of the system satisfying the following assumption:
+
+\textbf{Assumption A2:} There exists a non-negative continuous scalar function \( \rho(x^{0\sim n-1}) \), such that
+\begin{equation}
+\| \Delta f(x^{0\sim n-1}) \| \leq \rho(x^{0\sim n-1}). \notag
+\end{equation}
+
+While \(\theta = \theta(t) \in \mathbb{R}^m\) is an unknown \alert{time-varying} parameter vector with a pre-estimate \(\hat{\theta}_0 = \hat{\theta}_0(t) \in \mathbb{R}^m\), and satisfies
+
+\textbf{Assumption A3:} \(\|\theta - \hat{\theta}_0\| \leq \delta_0\), \(\|\dot{\theta} - \dot{\hat{\theta}}_0\| \leq \delta_1\), \(\forall t \geq 0\), with \(\delta_0\) and \(\delta_1\) being two non-negative real numbers.
+
+\end{frame}
+
+\begin{frame}{Time-Varying Model 2: Time-Varying Delay{\footfullcite{Liu G P. Predictive control of high-order fully actuated nonlinear systems with time-varying delays[J]. Journal of Systems Science and Complexity, 2022, 35(2): 457-470.}}}
+Consider the \(n\)-th order fully actuated discrete-time nonlinear system with time-varying input delay described as
+\begin{equation}
+    \begin{cases}
+      y(t + 1) = f\left(y^{(n-1)}(t), w^{(m-1)}(t - 1)\right) + g\left(y^{(n-1)}(t), w^{(m-1)}(t - 1), w(t)\right), \\
+      w(t) = u(t - d_t),
+    \end{cases}\notag
+\end{equation}
+
+where
+
+$$
+\begin{aligned}
+y^{[n-1]}(t) &= (y(t), y(t-1), \ldots, y(t-n+1))\\
+w^{[m-1]}(t - 1) &= (w(t - 1), w(t - 2), \ldots, w(t-m))
+\end{aligned}
+$$
+
+the initial conditions of the system are given by \( y(t) = \phi(t) \), \( u(t) = \psi(t) \), \( t \leq 0 \), \( y(t) \in \mathbb{R}^p \) is the output vector, \( u(t) \in \mathbb{R}^p \) the control input vector, \( w(t) \in \mathbb{R}^p \) the intermediate variable vector, \( d_t \in \mathbb{R} \) the \alert{time-varying} input delay (an integer), \( f(\cdot) \in \mathbb{R}^p \) and \( g(\cdot) \in \mathbb{R}^p \) nonlinear function vectors, \( \phi(t) \) and \( \psi(t) \) the initial function vectors, and \( n, m, p \) are positive integers. Also, it assumes that \( f(\cdot) \), \( g(\cdot) \), \( d_t \), \( \phi(t) \), \( \psi(t) \), \( n, m \) and \( p \) are known.
+
+\end{frame}
+
+\begin{frame}{References}
+\setbeamertemplate{bibliography item}[text]
+
+\begin{thebibliography}{10} % Beamer does not support BibTeX so references must be inserted manually as below
+\bibitem{}
+Duan G. High-order fully actuated system approaches: Part V. Robust adaptive control[J]. International Journal of Systems Science, 2021, 52(10): 2129-2143.
+\bibitem{}
+Liu G P. Predictive control of high-order fully actuated nonlinear systems with time-varying delays[J]. Journal of Systems Science and Complexity, 2022, 35(2): 457-470.
+\end{thebibliography}
+\end{frame}
+
+\begin{frame}
+\Huge{\centerline{Thanks!}}
+\end{frame}
+
+\end{document}
