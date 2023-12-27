@@ -1,0 +1,63 @@
+\begin{thebibliography}{9}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{#1}
+\expandafter\ifx\csname urlstyle\endcsname\relax\else
+  \urlstyle{same}\fi
+\expandafter\ifx\csname href\endcsname\relax
+  \DeclareUrlCommand\doi{\urlstyle{rm}}
+  \def\eprint#1#2{#2}
+\else
+  \def\doi#1{\href{https://doi.org/#1}{\nolinkurl{#1}}}
+  \let\eprint\href
+\fi
+
+\bibitem[张立毅\ 等(2019)张立毅, 高杨, 费腾, and 王玉婧]{ref1}
+张立毅, 高杨, 费腾, 等.
+\newblock 求解旅行商问题的搜寻者遗传算法\allowbreak[J].
+\newblock 数学的实践与认识, 2019, 7.
+
+\bibitem[冯志雨\ 等(2019)冯志雨, 游晓明, and 刘升]{ref2}
+冯志雨, 游晓明, 刘升.
+\newblock 分层递进的改进聚类蚁群算法解决 TSP
+  问题\allowbreak[J].
+\newblock 计算机科学与探索, 2019, 13\allowbreak (8): 1280.
+
+\bibitem[赵鑫\ 等(2022)赵鑫, 杨雄飞, and 钱育蓉]{ref3}
+赵鑫, 杨雄飞, 钱育蓉.
+\newblock 改进的蚁群优化算法求解旅行商问题\allowbreak[J].
+\newblock 计算机工程与设计, 2022, 43\allowbreak (4): 962-968.
+
+\bibitem[何锦福\ 等(2019)何锦福, 符强, and 王豪东]{ref4}
+何锦福, 符强, 王豪东.
+\newblock 求解 TSP 问题的改进模拟退火算法\allowbreak[J].
+\newblock 计算机时代, 2019, 7: 47-50.
+
+\bibitem[张永红\ 等(2018)张永红, 汪春峰, and 刘丽霞]{ref5}
+张永红, 汪春峰, 刘丽霞.
+\newblock 求线性多乘积规划问题的分支定界算法\allowbreak[J].
+\newblock 应用数学, 2018, 31\allowbreak (3): 533-542.
+
+\bibitem[李小莲(2019)]{ref6}
+李小莲.
+\newblock 动态规划法的应用分析\allowbreak[J].
+\newblock 计算机时代, 2019, 6.
+
+\bibitem[屈立成\ 等(2020)屈立成, 吕娇, 赵明, 王海飞, and
+  屈艺华]{ref7}
+屈立成, 吕娇, 赵明, 等.
+\newblock
+  基于三维时空地图和运动分解的多机器人路径规划算法\allowbreak[J].
+\newblock 计算机应用, 2020, 40\allowbreak (12): 3499.
+
+\bibitem[章春芳(2006)]{ref8}
+章春芳.
+\newblock 自适应的并行蚁群算法及其应用\allowbreak[D].
+\newblock 扬州大学, 2006.
+
+\bibitem[卢辉\ 等(2019)卢辉, 王红卫, 李锋, and 刘典]{ref9}
+卢辉, 王红卫, 李锋, 等.
+\newblock
+  考虑供应不确定性与需求非平稳性的项目调度与材料供应集成优化\allowbreak[J].
+\newblock 系统工程理论与实践, 2019, 39\allowbreak (3): 647-658.
+
+\end{thebibliography}
