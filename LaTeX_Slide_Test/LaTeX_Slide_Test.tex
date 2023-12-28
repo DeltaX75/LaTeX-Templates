@@ -39,17 +39,39 @@
     \tableofcontents
 \end{frame}
 \section{High Order Fully Actuated Approach}
+
 \begin{frame}{High Order Fully Actuated Approach}
-    \footnotesize
-    These integrals are remarkable for exhibiting apparent patterns that eventually break down.
-    \[
-\text{Let }\boldsymbol{\alpha}\boldsymbol{\beta}^T=\boldsymbol{A}\,\,\Rightarrow\,\,\left\{\begin{aligned}
-(\boldsymbol{\alpha}\boldsymbol{\beta}^T)^n&=(\boldsymbol{\alpha}^T\boldsymbol{\beta})^{(n-1)}\boldsymbol{A}\\
-&=\text{trace}(A)^{n-1}\boldsymbol{A}\\
-&=\lambda^{n-1}\boldsymbol{A}\\
-\end{aligned}\right.
-     \]
+Consider this strict feedback nonlinear system:
+$$
+\left\{
+\begin{aligned}
+\dot{x}_1&=f_1(x_1)+G_1x_2\\
+\dot{x}_2&=f_2(x_1,x_2)+G_2x_3\\
+&\quad\vdots\\
+\dot{x}_{n-1}&=f_{n-1}(x_1,\ldots,x_{n-1})+G_{n-1}x_n\\
+\dot{x}_n&=f_n(x_1,\ldots,x_n)+G_nu\\
+\end{aligned}
+\right.
+$$
+This strict feedback system can be transformed into the HOFA form:
+$$
+x_1^{(n)}-\sum_{i=1}^{n}(G_1G_2{\cdots}G_{i-1})f_{i}^{(n-i)}[x_1,h_2(\cdot),h_3(\cdot),\cdots,h_i(\cdot)]=(G_1G_2{\cdots}G_{n})u
+$$
 \end{frame}
+
+\begin{frame}{High Order Fully Actuated Approach}
+Let's make a simple deduction:
+$$
+\left\{
+\begin{aligned}
+\dot{x}_1&=f_1(x_1)+G_1x_2\\
+\dot{x}_2&=f_2(x_1,x_2)+G_2x_3\\
+\dot{x}_3&=f_2(x_1,x_2,x_3)+G_3u\\
+\end{aligned}
+\right.
+$$
+\end{frame}
+
 
 % insert a sample frame with two columns --------------------------------
 \begin{frame}
