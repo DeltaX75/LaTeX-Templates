@@ -1,4 +1,4 @@
-# LaTeX-Templates
+# LaTeX Templates
 
 ![LaTeX_Editor](https://img.shields.io/badge/LaTeX_Engine-TeXLive-blue)
 ![LaTeX_Editor](https://img.shields.io/badge/LaTeX_Editor-TexWorks-yellow)
